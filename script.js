@@ -60,9 +60,9 @@ z3 losowy generator
 /*
 z4 największa liczba
 */
-// let num1 = parseFloat(prompt("Podaj liczbę 1: "));
-// let num2 = parseFloat(prompt("Podaj liczbę 2: "));
-// let num3 = parseFloat(prompt("Podaj liczbę 3: "));
+let num1 = parseFloat(prompt("Podaj liczbę 1: "));
+let num2 = parseFloat(prompt("Podaj liczbę 2: "));
+let num3 = parseFloat(prompt("Podaj liczbę 3: "));
 
 // if(num1 == num2 && num2 == num3){
 //     console.log("Liczby są równe sami do siebie");
@@ -79,19 +79,47 @@ z4 największa liczba
 //     }
 // }
 
+//wersja druga (help przechowywuje tymczasowo największą liczbę)
+// if(num1 == num2 && num2 == num3){
+//     console.log("Liczby są równe.");
+// }
+// else{
+//     help = num1;
+//     if(help <= num2){
+//         help = num2;
+//     }
+//     if(help <= num3){
+//         help = num3;
+//     }
+//     console.log("Największa liczba to: " +help);
+// }
+
 /*
 z5 algorytm Euklidesa
 */
-function nwd(c, d) {
-    var tmp;
-    while (d) {
-        tmp = c % d;
-        c = d;
-        d = tmp;
-    }
-    return c;
-}
-console.log("Największy wspólny dzielnik to: " + nwd(10, 20));
+// function nwd() {
+//     var w;
+//     while (d) {
+//         w = c % d;
+//         c = d;
+//         d = w;
+//     }
+//     return c;
+// }
+// console.log("Największy wspólny dzielnik to: " + nwd(10, 20));
+
+//wersja z formularzami p1
+// function nwd(){
+//     let a = document.getElementById("n1").value;
+//     let b = document.getElementById("n2").value;
+
+//     for(let i = 1; i <= a && i <= b; i++){
+//         if(a % i == 0 && b % i == 0){
+//             divisor = i;
+//         }
+//     }
+//     document.getElementById("msg").innerHTML = divisor;
+// }
 
 /*
 z6 studenty
@@ -103,7 +131,7 @@ const student1 = {
 };
 
 const student2 = {
-    imie: "Rafał",
+    imie: "Andrzej",
     nazwisko: "Kozioł",
     wiek: 19,
 };
@@ -144,8 +172,8 @@ student5["wiek"] = prompt("Podaj wiek studenta nr. 5");
 
 console.log(student4.imie, student5.wiek)
 
-DocumentFragment.getElementById("st4").innerHTML = "Nowe studenty: 1) " + student4.imie, student4.nazwisko + ", " + student4.wiek;
-DocumentFragment.getElementById("st5").innerHTML = "2) " + student5.imie, student5.nazwisko + ", " + student5.wiek;
+document.getElementById("st4").innerHTML = "Nowe studenty: 1) " + student4.imie + student4.nazwisko + ", " + student4.wiek;
+document.getElementById("st5").innerHTML = "2) " + student5.imie + student5.nazwisko + ", " + student5.wiek;
 
 /*
 z8 zegar
