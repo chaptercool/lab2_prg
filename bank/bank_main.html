@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank JavaScript</title>
+    <link rel="stylesheet" href="/bank/bank_style.css">
+  </head>
+  <body>
+    <header>
+      <img src="/bank/jsbanklogo.png" alt="Logotyp banku JavaScript" />
+      <h2 class="bankname"><b>Bank JavaScript</b></h2>
+      <h3 class="bankname">Twoja bankowość online</h3>
+    </header>
+    <main>
+      <script src="/bank/bankscript.js"></script>
+      <form>
+        <fieldset>
+          <legend>Logowanie</legend>
+          <div class="fields">
+            <label for="imie">Nazwa użytkownika</label>
+            <input type="number" id="imie" />
+            <label for="pw">Hasło</label>
+            <input type="number" id="pw" />
+          </div>
+          <input type="submit" value="Zaloguj się" id="submit" onclick="login()"/>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <h6>© Bank JavaScript. Wszelkie prawa zastrzeżone.</h6>
+    </footer>
+  </body>
+</html>
