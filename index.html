@@ -1,81 +1,130 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS projekt</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Podstawowka z JavaScript</h1>
-    <b>JavaScript</b>, w skrócie JS - <i>skryptowy oraz wieloparadygmatowy język programowania</i>,<br />
-    stworzony przez firmę Netscape, najczęściej stosowany na stronach internetowych. <br />
+    <b>JavaScript</b>, w skrócie JS -
+    <i>skryptowy oraz wieloparadygmatowy język programowania</i>,<br />
+    stworzony przez firmę Netscape, najczęściej stosowany na stronach
+    internetowych. <br />
     Twórcą JavaScriptu jest Brendan Eich. <br />
     <p id="addR">
-        <!-- tutaj będzie wynik-->
+      <!-- tutaj będzie wynik-->
     </p>
     <p id="subR">
-        <!-- tutaj będzie wynik-->
+      <!-- tutaj będzie wynik-->
     </p>
     <p id="mulR">
-        <!-- tutaj będzie wynik-->
+      <!-- tutaj będzie wynik-->
     </p>
     <p id="divR">
-        <!-- tutaj będzie wynik-->
+      <!-- tutaj będzie wynik-->
     </p>
     <p id="modR">
-        <!-- tutaj będzie wynik-->
+      <!-- tutaj będzie wynik-->
     </p>
     <p id="trk">
-        <!-- tutaj będzie wynik-->
+      <!-- tutaj będzie wynik-->
     </p>
     <p id="nwl">
-        <!-- tutaj będzie wynik-->
+      <!-- tutaj będzie wynik-->
     </p>
     <p id="st4">
-        <!--wynik-->
+      <!--wynik-->
     </p>
     <p id="st5">
-        <!--wynik-->
+      <!--wynik-->
     </p>
     <form>
-        <input type="text" id="n1">
-        <input type="text" id="n2">
+      <input type="text" id="n1" />
+      <input type="text" id="n2" />
     </form>
     <button type="button" onclick="nwd()">Oblicz NWD</button>
-    <p id="msg">
-
-    </p>
-<!-- 
+    <p id="msg"></p>
+    <!-- 
     <script src="/script0.js">
     </script>
     <script src="/script.js">
     </script> -->
 
-    <script src="/scriptlab6+1.js"></script>
+    <!-- <script src="/scriptlab6+1.js"></script> -->
     <h1>Laboratorium 2</h1>
 
     <h2>Rozgrzewka</h2>
     <h3>Nowy rok</h3>
     <p id="nowyrok">
-        <!-- placeholder -->
+      <!-- placeholder -->
     </p>
 
     <h2>Zadanie 1: tabliczka mnożenia</h2>
-    <button onclick="TabMnoz()"> Pokaż tabliczkę mnożenia</button>
-    <table id = "tablmnoz">
-        <!-- placeholder -->
+    <button onclick="TabMnoz()">Pokaż tabliczkę mnożenia</button>
+    <table id="tablmnoz">
+      <!-- placeholder -->
     </table>
 
     <h2>Zadanie 2: obiekty</h2>
     <label for="ilosc">Liczba rekordów: </label>
-    <input type="number" id="ilosc" name="ilosc" min="1" max="20">
-    <button onclick ="los_czl()">Generuj</button>
+    <input type="number" id="ilosc" name="ilosc" min="1" max="20" />
+    <button onclick="los_czl()">Generuj</button>
     <table id="tabelka">
-        <!-- placeholder -->
+      <!-- placeholder -->
     </table>
     <a href="/bank/bank_main.html">Bank (niedziałający)</a>
 
+    <h2>Formularze HTML</h2>
+    <form novalidate name="biuletyn" onsubmit="return validatePassword()">
+      <fieldset>
+        <legend>Biuletyn</legend>
 
-</body>
+        <label for="name">Imię</label>
+        <input type="text" id="name" placeholder="Jan" />
+        <br />
+
+        <label for="surname">Nazwisko</label>
+        <input type="text" id="surname" placeholder="Kowalski" />
+        <br />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="jkowalski@wsiz.edu.pl" />
+        <br />
+
+        <label for="password">Hasło</label>
+        <input type="password" id="password" minlength="8" />
+        <br />
+
+        <label for="gender">Płeć</label>
+        <!-- <select name="gender" id="gender" size="2" required>
+                <option value="man">Mężczyzna</option>
+                <option value="woman">Kobieta</option>
+            </select> -->
+        <div>
+          <input type="radio" id="m" name="sex" value="m" />
+          <label for="m">Mężczyzna</label>
+          <input type="radio" id="k" name="sex" value="k" />
+          <label for="k">Kobieta</label>
+        </div>
+        <br />
+
+        <label for="phone">Numer telefonu</label>
+        <input type="tel" id="phone" name="phone" placeholder="123 456 789" />
+        <br />
+
+        <label for="birth">Data urodzenia</label>
+        <input type="date" id="birth" name="date" />
+        <br />
+
+        <label for="country">Kraj</label>
+        <input type="text" id="country" name="country" placeholder="Zimbabwe" />
+        <br />
+
+        <input type="submit" name="submit" value="Zapisz" />
+      </fieldset>
+    </form>
+    <script src="/scriptlab7.js"></script>
+  </body>
 </html>
