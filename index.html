@@ -77,25 +77,44 @@
     <a href="/bank/bank_main.html">Bank (niedziałający)</a>
 
     <h2>Formularze HTML</h2>
-    <form novalidate name="biuletyn" onsubmit="return validatePassword()">
+    <form novalidate name="biuletyn" onsubmit="return validation()">
       <fieldset>
         <legend>Biuletyn</legend>
 
         <label for="name">Imię</label>
         <input type="text" id="name" placeholder="Jan" />
         <br />
+        <p id="nameerror">
+          <!-- placeholder -->
+        </p>
 
         <label for="surname">Nazwisko</label>
         <input type="text" id="surname" placeholder="Kowalski" />
         <br />
+        <p id="surnameerror">
+          <!-- placeholder -->
+        </p>
 
         <label for="email">Email</label>
         <input type="email" id="email" placeholder="jkowalski@wsiz.edu.pl" />
         <br />
+        <p id="emailerror">
+          <!-- placeholder -->
+        </p>
 
         <label for="password">Hasło</label>
-        <input type="password" id="password" minlength="8" />
+        <input type="password" id="password" />
         <br />
+        <p id="passworderror">
+          <!-- placeholder -->
+        </p>
+
+        <label for="password2">Powtórz hasło</label>
+        <input type="password" id="password2" />
+        <br />
+        <p id="repeaterror">
+          <!-- placeholder -->
+        </p>
 
         <label for="gender">Płeć</label>
         <!-- <select name="gender" id="gender" size="2" required>
