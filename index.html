@@ -77,50 +77,51 @@
     <a href="/bank/bank_main.html">Bank (niedziałający)</a>
 
     <h2>Formularze HTML</h2>
-    <form novalidate name="biuletyn" onsubmit="return validation()">
+    <form novalidate name="biuletyn" onsubmit="">
       <fieldset>
         <legend>Biuletyn</legend>
 
         <label for="name">Imię</label>
-        <input type="text" id="name" placeholder="Jan" />
+        <input type="text" id="name" name="name" placeholder="Jan" />
         <br />
-        <p id="nameerror">
-          <!-- placeholder -->
-        </p>
+        <span class="error">
+          <!-- błąd -->
+        </span>
+        <br />
 
         <label for="surname">Nazwisko</label>
-        <input type="text" id="surname" placeholder="Kowalski" />
+        <input type="text" id="surname" name="surname" placeholder="Kowalski" />
         <br />
-        <p id="surnameerror">
-          <!-- placeholder -->
-        </p>
+        <span class="error">
+          <!-- błąd -->
+        </span>
+        <br />
 
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="jkowalski@wsiz.edu.pl" />
+        <input type="email" id="email" name="email" placeholder="jkowalski@wsiz.edu.pl" />
         <br />
-        <p id="emailerror">
-          <!-- placeholder -->
-        </p>
+        <span class="error">
+          <!-- błąd -->
+        </span>
+        <br />
 
         <label for="password">Hasło</label>
-        <input type="password" id="password" />
+        <input type="password" id="password" name="password"/>
         <br />
-        <p id="passworderror">
-          <!-- placeholder -->
-        </p>
+        <span class="error">
+          <!-- błąd -->
+        </span>
+        <br />
 
         <label for="password2">Powtórz hasło</label>
-        <input type="password" id="password2" />
+        <input type="password" id="password2" name="password2"/>
         <br />
-        <p id="repeaterror">
-          <!-- placeholder -->
-        </p>
+        <span class="error">
+          <!-- błąd -->
+        </span>
+        <br />
 
         <label for="gender">Płeć</label>
-        <!-- <select name="gender" id="gender" size="2" required>
-                <option value="man">Mężczyzna</option>
-                <option value="woman">Kobieta</option>
-            </select> -->
         <div>
           <input type="radio" id="m" name="sex" value="m" />
           <label for="m">Mężczyzna</label>
@@ -128,18 +129,89 @@
           <label for="k">Kobieta</label>
         </div>
         <br />
+        <span class="gendererror">
+          <!-- błąd -->
+        </span>
+        <br />
 
         <label for="phone">Numer telefonu</label>
         <input type="tel" id="phone" name="phone" placeholder="123 456 789" />
         <br />
+        <span class="error">
+          <!-- błąd -->
+        </span>
+        <br />
 
         <label for="birth">Data urodzenia</label>
-        <input type="date" id="birth" name="date" />
+        <input type="date" id="date" name="date"/>
+        <br />
+        <span class="error">
+          <!-- błąd -->
+        </span>
         <br />
 
         <label for="country">Kraj</label>
-        <input type="text" id="country" name="country" placeholder="Zimbabwe" />
+        <select name="country">
+          <option></option>
+          <option value="Polska">Polska</option>
+          <option value="Ukraina">Ukraina</option>
+          <option value="Zimbabwe">Zimbabwe</option>
+          <option value="Włochy">Włochy</option>
+        </select>
         <br />
+
+        <div class="district">
+            <label>Województwo: </label>
+            <input type="text" disabled name="district">
+            <span class="error">
+              <!-- błąd -->
+            </span>
+            <br />
+        </div>
+        <div class="district-choose" hidden>
+            <label>Województwo: </label>
+            <select name="district" disabled>
+                <option></option>
+                <option value="Dolnośląskie">Dolnośląskie</option>
+                <option value="Kujawsko-Pomorskie">Kujawsko-Pomorskie</option>
+                <option value="Lubelskie">Lubelskie</option>
+                <option value="Lubuskie">Lubuskie</option>
+                <option value="Łódzkie">Łódzkie</option>
+                <option value="Małopolskie">Małopolskie</option>
+                <option value="Mazowieckie">Mazowieckie</option>
+                <option value="Opolskie">Opolskie</option>
+                <option value="Podkarpackie">Podkarpackie</option>
+                <option value="Pomorskie">Pomorskie</option>
+                <option value="Śląskie">Śląskie</option>
+                <option value="Świętokrzyskie">Świętokrzyskie</option>
+                <option value="Warmińsko-Mazurskie">Warmińsko-Mazurskie</option>
+                <option value="Wielkopolskie">Wielkopolskie</option>
+                <option value="Zachodniopomorskie">Zachodniopomorskie</option>
+            </select>
+            <br />
+            <span class="error">
+              <!-- błąd -->
+            </span>
+            <br />
+        </div>
+
+        <label for="address">Adres zamieszkania: </label>
+        <input type="text" disabled name="address">
+        <span class="error">
+          <!-- błąd -->
+        </span>
+        <br />
+
+        <input type="checkbox" checked name="hasSameContactAddress">
+        <label>Adres korespodencyjny jest taki samy jak adres zamieszkania</label>
+
+        <div class="contactAddress" hidden>
+          <label>Adres korespodencyjny: </label>
+          <input type="text" disabled name="contactAddress">
+          <span class="error">
+            <!-- błąd -->
+          </span>
+        </div>
 
         <input type="submit" name="submit" value="Zapisz" />
       </fieldset>
