@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/bank/powtórzenie/styles.css" />
+    <title>Serwis internetowy</title>
+  </head>
+  <body>
+    <header>
+      <h1>Serwis internetowy</h1>
+    </header>
+    <form class="form" id="form1">
+      <fieldset>
+        <legend>Rejestracja</legend>
+        <div class="fields">
+          <label for="name">Imię (min. 3 znaki)</label>
+          <input type="text" name="name" id="name"/>
+          <label for="surname">Nazwisko</label>
+          <input type="text" name="surname" id="surname"/>
+          <label for="nickname">Nickname</label>
+          <input type="text" name="nickname" id="nickname"/>
+          <br>
+
+          <label for="password">Hasło</label>
+          <input type="password" name="password" id="password"/>
+          <label for="repeatPassword">Powtórz hasło</label>
+          <input type="password" name="repeatPassword" id="repeatPassword"/>
+
+          <div class="form-message"></div>
+          <br>
+
+          <button type="submit" class="button submit-btn" onclick="">Wyślij</button>
+        </div>
+      </fieldset>
+    </form>
+    <script src="/bank/powtórzenie/script.js"></script>
+  </body>
+</html>

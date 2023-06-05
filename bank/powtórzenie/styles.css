@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: grid;
+    place-items: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    background-color: darkslategray;
+    border: 1px rgb(47, 79, 79) solid;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-display: auto;
+    font-size: x-large;
+    font-weight: 500;
+    color: white;
+}
+
+fieldset {
+    margin-top: 20px;
+    background-color: rgb(96, 162, 162);
+    border: 1px rgb(96, 162, 162) solid;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+fieldset legend {
+    background-color: rgb(53, 96, 96);
+    border: 1px rgb(53, 96, 96) solid;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+}
+
+fieldset label {
+    font-weight: 400;
+    color: white;
+}
+
+fieldset input {
+    border: 1px white solid;
+    border-radius: 10px;
+}
+
+.fields{
+    display: grid;
+    place-items: center;
+}
